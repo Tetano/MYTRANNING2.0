@@ -6,11 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
-import com.example.tutorialrecycleview.Cliente
-import com.example.tutorialrecycleview.ClienteAdapter
+import com.example.renovando.Cliente
+import com.example.renovando.ClienteAdapter
 
-import kotlinx.android.synthetic.main.activity_main.*
+//import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
+import kotlinx.android.synthetic.main.tela_adm.*
 import org.jetbrains.anko.appcompat.v7.toolbar
 
 class TelaAdm : AppCompatActivity() {
