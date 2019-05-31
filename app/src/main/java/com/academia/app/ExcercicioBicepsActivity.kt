@@ -1,4 +1,4 @@
-package com.example.renovando
+package com.academia.app
 
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
@@ -6,19 +6,20 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 
-class ExercicioAbdominalActivity : AppCompatActivity() {
+class ExcercicioBicepsActivity : AppCompatActivity() {
+
 
     var count: Int = 0
     lateinit var option: Spinner
     lateinit var result: TextView
     lateinit var repetir: TextView
     lateinit var nrepetir: TextView
-    lateinit var btncont : Button
-    lateinit var btncont2 : Button
+    lateinit var btncont: Button
+    lateinit var btncont2: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_exercicio_pernas)
+        setContentView(R.layout.activity_excercicio_biceps)
 
 
 
@@ -33,7 +34,7 @@ class ExercicioAbdominalActivity : AppCompatActivity() {
         btncont2.setBackgroundColor(Color.RED)
 
         var options = arrayOf("")
-        var prencher: String = "Abdominais" // Ao clicar
+        var prencher: String = "Biceps" // Ao clicar
         fun verificaString(campo: String) {
             if (campo.equals("Abdominais") || campo.equals("ABDOMINAIS")) {
 
@@ -57,7 +58,8 @@ class ExercicioAbdominalActivity : AppCompatActivity() {
             }
             if (campo.equals("Pernas") || campo.equals("PERNAS")) {
 
-                options = arrayOf("Exercicios", "Leg press ", "Agachamento na máquina", "Agachamento hack ", "Agachamento")
+                options =
+                    arrayOf("Exercicios", "Leg press ", "Agachamento na máquina", "Agachamento hack ", "Agachamento")
             }
         }
         verificaString(prencher)

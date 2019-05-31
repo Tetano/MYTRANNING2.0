@@ -1,4 +1,4 @@
-package com.example.renovando
+package com.academia.app
 
 import android.app.Activity
 import android.content.Intent

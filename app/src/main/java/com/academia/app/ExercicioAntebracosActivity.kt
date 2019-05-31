@@ -1,13 +1,12 @@
-package com.example.renovando
+package com.academia.app
 
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
-import kotlinx.android.synthetic.main.activity_exercicio.*
 
-class ExercicioPernasActivity : AppCompatActivity() {
+class ExercicioAntebracosActivity : AppCompatActivity() {
 
     var count: Int = 0
     lateinit var option: Spinner
@@ -19,7 +18,7 @@ class ExercicioPernasActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_exercicio_pernas)
+        setContentView(R.layout.activity_exercicio_antebracos)
 
 
 
@@ -34,7 +33,7 @@ class ExercicioPernasActivity : AppCompatActivity() {
         btncont2.setBackgroundColor(Color.RED)
 
         var options = arrayOf("")
-        var prencher: String = "Pernas" // Ao clicar
+        var prencher: String = "Antebraços" // Ao clicar
         fun verificaString(campo: String) {
             if (campo.equals("Abdominais") || campo.equals("ABDOMINAIS")) {
 

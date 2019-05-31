@@ -1,4 +1,4 @@
-package com.example.renovando
+package com.academia.app
 
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton

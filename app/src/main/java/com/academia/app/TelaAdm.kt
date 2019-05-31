@@ -1,4 +1,4 @@
-package com.example.renovando
+package com.academia.app
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar
@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
-import com.example.renovando.Cliente
-import com.example.renovando.ClienteAdapter
+import com.academia.app.Cliente
+import com.academia.app.ClienteAdapter
 
 //import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*

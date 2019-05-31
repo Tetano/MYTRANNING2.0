@@ -1,11 +1,11 @@
-package com.example.renovando
+package com.academia.app
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.renovando.R
+import com.academia.app.R
 import kotlinx.android.synthetic.main.cliente_item.view.*
 
 class ClienteAdapter(private val context: Context, private var clienteList: MutableList<Cliente>):

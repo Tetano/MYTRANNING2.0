@@ -1,38 +1,34 @@
-package com.example.renovando
+package com.academia.app
 
-import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.graphics.Color
 import android.view.View
 import android.widget.*
+import kotlinx.android.synthetic.main.activity_exercicio.*
 
-class ExcercicioCostaActivity : AppCompatActivity() {
+class ExercicioActivity : AppCompatActivity() {
 
-    var count: Int = 0
     lateinit var option: Spinner
     lateinit var result: TextView
     lateinit var repetir: TextView
     lateinit var nrepetir: TextView
-    lateinit var btncont: Button
-    lateinit var btncont2: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_excercicio_costa)
-
+        setContentView(R.layout.activity_exercicio)
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
         option = findViewById(R.id.spinner1) as Spinner
         result = findViewById(R.id.txt1) as TextView
         repetir = findViewById(R.id.txt2) as TextView
         nrepetir = findViewById(R.id.txt3) as TextView
-        btncont = findViewById(R.id.btncont) as Button
-        btncont2 = findViewById(R.id.btncont2) as Button
-
-        btncont.setBackgroundColor(Color.CYAN)
-        btncont2.setBackgroundColor(Color.RED)
-
+        var count: Int = 0
+        //print("morri aqui 1")
+        //Log.e("Teste","teste1")
         var options = arrayOf("")
-        var prencher: String = "Costas" // Ao clicar
+        var prencher: String = "Biceps" // Ao clicar
         fun verificaString(campo: String) {
             if (campo.equals("Abdominais") || campo.equals("ABDOMINAIS")) {
 
@@ -96,7 +92,7 @@ class ExcercicioCostaActivity : AppCompatActivity() {
                 Toast.makeText(
                     getApplicationContext(), "Por favor selecione um exercício ",
                     Toast.LENGTH_SHORT
-                ).show();
+                ).show()
                 return@setOnClickListener
             }
             if (count >= 4) {
@@ -127,10 +123,9 @@ class ExcercicioCostaActivity : AppCompatActivity() {
                 Toast.makeText(
                     getApplicationContext(), "A contagem já é zero",
                     Toast.LENGTH_SHORT
-                ).show();
+                ).show()
             }
 
         }
     }
 }
-
