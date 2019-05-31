@@ -85,5 +85,5 @@
             android:text="Cadastrar treino"
             android:layout_width="368dp"
             android:layout_height="67dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" android:id="@+id/btnCadTreino"/>
 </LinearLayout>
