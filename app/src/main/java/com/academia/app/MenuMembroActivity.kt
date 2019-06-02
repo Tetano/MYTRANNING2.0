@@ -15,6 +15,7 @@ class MenuMembroActivity : AppCompatActivity() {
         var btnExercicioCostas = findViewById<Button>(R.id.btnCostas)
         var btnExercicioPeito = findViewById<Button>(R.id.btnPeito)
         var btnExercicioPernas = findViewById<Button>(R.id.btnPernas)
+        var btnCadExercicio = findViewById<Button>(R.id.btnCadTreino)
 
 //        var btnExercicioVoltar = findViewById<Button>(R.id.btnVoltar)
 //        btnExercicioVoltar.setOnClickListener { voltar() }
@@ -22,6 +23,7 @@ class MenuMembroActivity : AppCompatActivity() {
 //        var btnExercicioAbdominal = findViewById<Button>(R.id.btnAbdominal)
 //        btnExercicioAbdominal.setOnClickListener { abdominal() }
 
+        btnCadExercicio.setOnClickListener { CadastrarTreino() }
 
         btnExercicioPernas.setOnClickListener { Pernas() }
 
@@ -68,5 +70,8 @@ class MenuMembroActivity : AppCompatActivity() {
         var intent = Intent(applicationContext, ExercicioPernasActivity::class.java)
         startActivity(intent)
     }
-
+    fun CadastrarTreino() {
+        var intent = Intent(applicationContext, AvatarMenuMembroActivity::class.java)
+        startActivity(intent)
+    }
 }
