@@ -1,5 +1,6 @@
 package com.academia.app
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
@@ -49,6 +50,7 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu, menu)
+
         return true
     }
 
@@ -67,7 +69,8 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         when (item.itemId) {
 
             R.layout.activity_menu_membro -> {
-
+            val trocartela = Intent(this.baseContext,MenuMembroActivity::class.java)
+                startActivity(trocartela)
             }
             }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)

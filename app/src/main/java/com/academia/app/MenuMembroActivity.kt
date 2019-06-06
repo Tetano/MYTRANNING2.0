@@ -23,7 +23,7 @@ class MenuMembroActivity : AppCompatActivity() {
 //        var btnExercicioAbdominal = findViewById<Button>(R.id.btnAbdominal)
 //        btnExercicioAbdominal.setOnClickListener { abdominal() }
 
-        btnCadExercicio.setOnClickListener { CadastrarTreino() }
+//        btnCadExercicio.setOnClickListener { CadastrarTreino() }
 
         btnExercicioPernas.setOnClickListener { Pernas() }
 
@@ -70,8 +70,8 @@ class MenuMembroActivity : AppCompatActivity() {
         var intent = Intent(applicationContext, ExercicioPernasActivity::class.java)
         startActivity(intent)
     }
-    fun CadastrarTreino() {
-        var intent = Intent(applicationContext, AvatarMenuMembroActivity::class.java)
-        startActivity(intent)
-    }
+//    fun CadastrarTreino() {
+//        var intent = Intent(applicationContext, AvatarMenuMembroActivity::class.java)
+//        startActivity(intent)
+//    }
 }
