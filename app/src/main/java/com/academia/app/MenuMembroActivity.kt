@@ -15,7 +15,7 @@ class MenuMembroActivity : AppCompatActivity() {
         var btnExercicioCostas = findViewById<Button>(R.id.btnCostas)
         var btnExercicioPeito = findViewById<Button>(R.id.btnPeito)
         var btnExercicioPernas = findViewById<Button>(R.id.btnPernas)
-        var btnCadTreinoAvatar = findViewById<Button>(R.id.btnCadTreino)
+        var btnCadExercicio = findViewById<Button>(R.id.btnCadTreino)
 
 //        var btnExercicioVoltar = findViewById<Button>(R.id.btnVoltar)
 //        btnExercicioVoltar.setOnClickListener { voltar() }
@@ -23,6 +23,7 @@ class MenuMembroActivity : AppCompatActivity() {
 //        var btnExercicioAbdominal = findViewById<Button>(R.id.btnAbdominal)
 //        btnExercicioAbdominal.setOnClickListener { abdominal() }
 
+//        btnCadExercicio.setOnClickListener { CadastrarTreino() }
 
         btnExercicioPernas.setOnClickListener { Pernas() }
 
@@ -36,16 +37,14 @@ class MenuMembroActivity : AppCompatActivity() {
 
         btnExercicioPeito.setOnClickListener(){ Abdominais() }
 
-        btnCadTreinoAvatar.setOnClickListener(){ CadastrarTreinoAvatar() }
-
 
 
     }
 
-//    fun voltar() {
-//        var intent = Intent(applicationContext,MainActivity::class.java)
-//        startActivity(intent)
-//    }
+    fun voltar() {
+        var intent = Intent(applicationContext,MainActivity::class.java)
+        startActivity(intent)
+    }
     fun Abdominais() {
         var intent = Intent(applicationContext, ExercicioAbdominalActivity::class.java)
         startActivity(intent)
@@ -71,9 +70,8 @@ class MenuMembroActivity : AppCompatActivity() {
         var intent = Intent(applicationContext, ExercicioPernasActivity::class.java)
         startActivity(intent)
     }
-
-    fun CadastrarTreinoAvatar() {
-        var intent = Intent(applicationContext, AvatarMenuMembroActivity::class.java)
-        startActivity(intent)
-    }
+//    fun CadastrarTreino() {
+//        var intent = Intent(applicationContext, AvatarMenuMembroActivity::class.java)
+//        startActivity(intent)
+//    }
 }

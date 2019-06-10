@@ -17,15 +17,15 @@ import org.jetbrains.anko.appcompat.v7.toolbar
 class TelaAdm : AppCompatActivity() {
 
     val ClienteList: MutableList<Cliente> = mutableListOf(
-          Cliente("Cleito Rasta", 65.0, 1.70,"djcleitorasta","melhorquealok",true,12)
-        , Cliente("Cleito Rasta", 65.0, 1.70,"djcleitorasta","melhorquealok",true,12)
-        , Cliente("Cleito Rasta", 65.0, 1.70,"djcleitorasta","melhorquealok",true,12)
-        , Cliente("Cleito Rasta", 65.0, 1.70,"djcleitorasta","melhorquealok",true,12)
-        , Cliente("Cleito Rasta", 65.0, 1.70,"djcleitorasta","melhorquealok",true,12)
-        , Cliente("Cleito Rasta", 65.0, 1.70,"djcleitorasta","melhorquealok",true,12)
-        , Cliente("Cleito Rasta", 65.0, 1.70,"djcleitorasta","melhorquealok",true,12)
-        , Cliente("Cleito Rasta", 65.0, 1.70,"djcleitorasta","melhorquealok",true,12)
-        , Cliente("Cleito Rasta", 65.0, 1.70,"djcleitorasta","melhorquealok",true,12)
+          Cliente("Cleito Rasta", 65.0, 1.70,"usuario","melhorquealok",true,12)
+        , Cliente("Cleito Rasta", 65.0, 1.70,"usuario","melhorquealok",true,12)
+        , Cliente("Cleito Rasta", 65.0, 1.70,"usuario","melhorquealok",true,12)
+        , Cliente("Cleito Rasta", 65.0, 1.70,"usuario","melhorquealok",true,12)
+        , Cliente("Cleito Rasta", 65.0, 1.70,"usuario","melhorquealok",true,12)
+        , Cliente("Cleito Rasta", 65.0, 1.70,"usuario","melhorquealok",true,12)
+        , Cliente("Cleito Rasta", 65.0, 1.70,"usuario","melhorquealok",true,12)
+        , Cliente("Cleito Rasta", 65.0, 1.70,"usuario","melhorquealok",true,12)
+        , Cliente("Cleito Rasta", 65.0, 1.70,"usuario","melhorquealok",true,12)
     )
 
     lateinit var ClienteAdapter: ClienteAdapter
@@ -59,6 +59,9 @@ class TelaAdm : AppCompatActivity() {
         return when (item.itemId) {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
+
         }
     }
+
+
 }

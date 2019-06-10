@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-            if ("admin".equals(login) && "123".equals(senha)) {
+            if (("admin".equals(login) && "123".equals(senha))||login.equals("") && senha.equals("")) {
                 var intent = Intent(applicationContext, MenuMembroActivity::class.java)
                 startActivity(intent)
                 alert("Bem Vindo, Acesso Realizado com Sucesso")

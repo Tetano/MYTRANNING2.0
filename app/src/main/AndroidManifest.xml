@@ -30,6 +30,8 @@
         </activity>
         <activity android:name=".MenuMembroActivity">
         </activity>
+        <activity android:name=".AvatarMenuMembroActivity">
+        </activity>
         <activity android:name=".TelaAdm">
         </activity>
         <activity android:name=".AvatarMenuMembroActivity">
