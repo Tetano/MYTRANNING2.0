@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "281690353732-f9k0s2qf27lo1m39cqr0oe5968ibio98.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.academia.app",
+            "certificate_hash": "147c7d60a42f02a0a13a777d0759ccc93b38dbf8"
+          }
+        },
+        {
           "client_id": "281690353732-m0v4io96r8tti5gktt36149ub2fak1b4.apps.googleusercontent.com",
           "client_type": 3
         }

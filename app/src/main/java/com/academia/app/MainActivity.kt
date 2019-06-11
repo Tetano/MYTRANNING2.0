@@ -1,40 +1,41 @@
 package com.academia.app
+
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.content.ContextCompat.startActivity
-import android.util.Log
-import android.view.Menu
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.auth.AuthResult
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    var str : String? = ""
 
-    var usuarios: ArrayList<Usuario> = arrayListOf()
-    lateinit var usuario: Usuario
-    lateinit var lt: ListUsuario
-    lateinit var tLogin : EditText
-    lateinit var tSenha : EditText
+    var fbAuth = FirebaseAuth.getInstance()
+
+    lateinit var tLogin: EditText
+    lateinit var tSenha: EditText
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-         tLogin = findViewById(R.id.editTextLogin)
+
+        tLogin = findViewById(R.id.editTextLogin)
         tSenha = findViewById(R.id.editTextSenha)
-
-
 
 
         var btEntrar = findViewById<Button>(R.id.btnEntrar)
         btEntrar.setOnClickListener {
             //val usuario = intent.getSerializableExtra("usuario") as ListUsuario
-            Logar(tLogin,tSenha) }
+            Logar(tLogin, tSenha)
+        }
 
         var btCadastrar = findViewById<Button>(R.id.btnCadastrar)
         btCadastrar.setOnClickListener {
-            Cadastrar()
+            //     Cadastrar()
         }
 
         var btLimpar = findViewById<Button>(R.id.btnLimpar)
@@ -49,29 +50,28 @@ class MainActivity : AppCompatActivity() {
         var login = tLogin.text.toString()
         var senha = tSenha.text.toString()
 
+        alert("Autenticando...")
+
+        fbAuth.signInWithEmailAndPassword(login, senha)
+            .addOnCompleteListener(this, OnCompleteListener<AuthResult> { task ->
+                if (task.isSuccessful) {
 
 
-            if (("admin".equals(login) && "123".equals(senha))||login.equals("") && senha.equals("")) {
-                var intent = Intent(applicationContext, MenuMembroActivity::class.java)
-                startActivity(intent)
-                alert("Bem Vindo, Acesso Realizado com Sucesso")
-            } else {
-                alert("Login e/ou Senha Incorretos")
-            }
+                    var intent = Intent(applicationContext, MenuMembroActivity::class.java)
+                    startActivity(intent)
+                    intent.putExtra("id", fbAuth.currentUser?.email)
+                    alert("Bem Vindo, Acesso Realizado com Sucesso.")
+
+                } else {
+                    alert("Error: Login e/ou Senha Incorretos.")
+                }
+            })
     }
-
-    fun percorrerEretornar(listusuario : ListUsuario,tLogin: EditText,tSenha: EditText){
-      var i : Int // //
-//        while ()
-
-    }
-
 
 
     fun Cadastrar() {
         var intent = Intent(this, CadastroActivity::class.java)
         startActivityForResult(intent, 0)
-
 
     }
 // //Esssa está funcionando
@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
 //    }
 
 
-//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    //    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
 //        super.onActivityResult(requestCode, resultCode, data)
 //        if(requestCode==0){
 //            val usuario = intent.getSerializableExtra("usuario") as ListUsuario
@@ -106,6 +106,8 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
+
+
 
 
 
