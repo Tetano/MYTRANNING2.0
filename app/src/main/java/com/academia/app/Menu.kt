@@ -1,5 +1,6 @@
 package com.academia.app
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
@@ -11,6 +12,8 @@ import android.support.design.widget.NavigationView
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.Menu
+import android.widget.Toast
+import org.jetbrains.anko.alert
 
 class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -49,6 +52,7 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu, menu)
+
         return true
     }
 
@@ -68,6 +72,11 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
 
             R.layout.activity_menu_membro -> {
 
+            }
+            R.id.nav_teladm->{
+                Toast.makeText(this,"Carregando A Tela do administrador", Toast.LENGTH_SHORT).show()
+                var intent = Intent(applicationContext, TelaAdm::class.java)
+                startActivity(intent)
             }
             }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
