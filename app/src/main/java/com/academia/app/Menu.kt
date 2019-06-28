@@ -68,7 +68,7 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         // Handle navigation view item clicks here.
         when (item.itemId) {
 
-            R.id.nav_home-> {
+            R.id.nav_montarexercicio-> {
             val trocartela = Intent(this.baseContext,MenuMembroActivity::class.java)
                 startActivity(trocartela)
             }
