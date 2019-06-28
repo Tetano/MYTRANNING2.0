@@ -72,7 +72,12 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             val trocartela = Intent(this.baseContext,MenuMembroActivity::class.java)
                 startActivity(trocartela)
             }
+            R.id.nav_tirarfotos->{
+                val trocartela = Intent(this.baseContext,CadastrarFotos::class.java)
+                startActivity(trocartela)
             }
+            }
+
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         drawerLayout.closeDrawer(GravityCompat.START)
         return true

@@ -50,21 +50,21 @@ class MainActivity : AppCompatActivity() {
         var login = tLogin.text.toString()
         var senha = tSenha.text.toString()
 
-//        alert("Autenticando...")
-//
-//        fbAuth.signInWithEmailAndPassword(login, senha)
-//            .addOnCompleteListener(this, OnCompleteListener<AuthResult> { task ->
-//                if (task.isSuccessful) {
-//
-                    var intent = Intent(applicationContext, MenuMembroActivity::class.java)
+        alert("Autenticando...")
+
+        fbAuth.signInWithEmailAndPassword(login, senha)
+            .addOnCompleteListener(this, OnCompleteListener<AuthResult> { task ->
+                if (task.isSuccessful) {
+
+                    var intent = Intent(applicationContext, Menu::class.java)
                     startActivity(intent)
-//                    intent.putExtra("id", fbAuth.currentUser?.email)
-//                    alert("Bem Vindo, Acesso Realizado com Sucesso.")
-//
-//                } else {
-//                    alert("Error: Login e/ou Senha Incorretos.")
-//                }
-//            })
+                    intent.putExtra("id", fbAuth.currentUser?.email)
+                    alert("Bem Vindo, Acesso Realizado com Sucesso.")
+
+                } else {
+                    alert("Error: Login e/ou Senha Incorretos.")
+                }
+            })
     }
 
 
